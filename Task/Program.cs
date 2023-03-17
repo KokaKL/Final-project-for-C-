@@ -20,3 +20,28 @@ void PrintArray(string[] array)
         System.Console.Write(array[i] + "; ");
     }
 }
+string[] FillArray(string[] array)
+{
+    int i = 0;
+    int num = 1;
+    for (int x = 0; x < array.Length; x++)
+    {
+        array[i] = PromtString($"Введите фразу номер {num}");
+        i++;
+        num++;
+    }
+    return array;
+}
+
+int SizeNewArray(string[] array)
+{
+    int count = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i].Length <= 3)
+        {
+            count++;
+        }
+    }
+    return count;
+}
